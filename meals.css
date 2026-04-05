@@ -1,0 +1,30 @@
+.headbox {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    border-radius: 12px;
+    background-color: aqua;
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.mealboxlist {
+    position: fixed;
+    top: 70px;
+    bottom: 80px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+
+.mealbox {
+    display: flex;
+    justify-content: center;
+    border-radius: 12px;
+    background-color: aqua;
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
