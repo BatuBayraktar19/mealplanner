@@ -3,11 +3,3 @@
   display: flex;
   justify-content: center;
 }
-
-.navigationbox {
-  color: white;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}

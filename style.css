@@ -19,6 +19,11 @@ body {
     height: 25px;
     background-color: black;
     border-radius: 12px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .navigationbox:active {
@@ -67,4 +72,8 @@ background-color: goldenrod;
 .addbox:hover {
     background-color: blanchedalmond;
 
+}
+
+.selected {
+    background-color: orange;
 }
