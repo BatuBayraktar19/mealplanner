@@ -1,0 +1,70 @@
+.navigation {
+    position: fixed;
+    bottom: 0px;
+    display: flex;
+    height: 60px;
+    width: 100vw;
+    background-color: gray;
+    align-items: center;
+    justify-content: space-around;
+}
+
+body {
+    display: block;
+    margin: 0px;
+}
+
+.navigationbox {
+    width: 50px;
+    height: 25px;
+    background-color: black;
+    border-radius: 12px;
+}
+
+.navigationbox:active {
+background-color: goldenrod;
+}
+
+.header {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    left: 20px;
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-around;  
+    border-radius: 12px;
+}
+
+.listbox {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    border-radius: 12px;
+    background-color: aqua;
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); 
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.addbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 10px;
+    bottom: 70px;
+    height: 40px;
+    width: 40px;
+    border-radius: 12px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); 
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    transition: all 125ms;
+}
+
+.addbox:hover {
+    background-color: blanchedalmond;
+
+}
