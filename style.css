@@ -15,6 +15,9 @@
   --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 
   --border-controls: 1px solid grey;
+
+  --header-height: 50px;
+  --footer-height: 80px;
 }
 
 @font-face {
@@ -38,7 +41,7 @@ h1 {
   position: fixed;
   bottom: 0px;
   display: flex;
-  height: 80px;
+  height: var(--footer-height);
   width: 100vw;
   background-color: var(--color-primary);
   align-items: center;
@@ -61,7 +64,7 @@ header {
   right: 0;
   left: 0;
   display: flex;
-  height: 50px;
+  height: var(--header-height);
   background-color: var(--color-primary);
   align-items: center;
   justify-content: center;

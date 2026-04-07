@@ -1,39 +1,66 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meals</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="meals.css" />
-  </head>
 
-  <body>
-    <div class="wrapper">
-      <div class="navigation">
-        <div class="navigationbox"></div>
-        <div class="navigationbox"></div>
-        <div class="navigationbox"></div>
-        <div class="navigationbox"></div>
-        <div class="navigationbox"></div>
-      </div>
-      <div class="header">
-        <div class="headbox">
-          <span>Meals</span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meals</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="meals.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="list">
+      <header class="header">
+        <h1>Meals</h1>
+        <img src="assets/img/icon_chef_hat.svg">
+      </header>
+
+      <div class="list">
+        <div class="meal">
+          <h2>Lachsfilet</h2>
+          <span>-200g Lachs</span>
+          <span>-Butter</span>
+          <span>-Salz</span>
         </div>
-      </div>
-      <div class="mealboxlist">
-        <div class="mealbox">
-          <span>lachsfilet</span>
+        <div class="meal">
+          <h2>Riceporridge</h2>
+          <span>-Reis</span>
+          <span>-Wasser</span>
         </div>
-        <div class="mealbox">
-          <span>Riceporridge</span>
+        <div class="meal">
+          <img src="assets/img/meals/Döner.jpg" class="mealboximg">
+          <div class="displayFlex">
+            <h2>Döner</h2>
+            <span>-macht schöner</span>
+          </div>
+
         </div>
-        <div class="mealbox">Meal 3</div>
       </div>
       <a class="addbox" href="addmeal.html">
         <img src="assets/img/icon_add.svg" alt="" />
       </a>
     </div>
-  </body>
+  </div>
+
+  <footer class="navigation">
+    <a class="navigationbox" href="grocerylist.html">
+      <img src="assets\img\icon_list.svg">
+    </a>
+    <a class="navigationbox" href="calendar.html">
+      <img src="assets\img\icon_calendar.svg">
+    </a>
+    <a class="navigationbox" href="addmeal.html">
+      <img src="assets\img\icon_add.svg">
+    </a>
+    <a class="navigationbox">
+      <img src="assets\img\icon_burger_DarkBlue.svg">
+    </a>
+    <a class="navigationbox" href="">
+      <img src="assets\img\icon_gear.svg">
+    </a>
+  </footer>
+</body>
+
 </html>
