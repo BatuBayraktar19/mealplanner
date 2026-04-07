@@ -27,18 +27,16 @@ form {
   gap: 10px;
 }
 
-.ingredient-wrapper button {
-  width: 32px;
-  height: 32px;
-  border-radius: var(--border-radius);
-  border: var(--border-controls);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .ingredient-wrapper button img {
   height: 20px;
+}
+
+.save-button {
+  min-height: 30px;
+  width: fit-content;
+  padding: 0 var(--small-gap);
+  border-radius: var(--border-radius);
+  border: var(--border-controls);
 }
 
 input {
@@ -48,12 +46,4 @@ input {
   border-radius: var(--border-radius);
   border: var(--border-controls);
   margin: 0;
-}
-
-.save-button {
-  min-height: 30px;
-  width: fit-content;
-  padding: 0 var(--small-gap);
-  border-radius: var(--border-radius);
-  border: var(--border-controls);
 }

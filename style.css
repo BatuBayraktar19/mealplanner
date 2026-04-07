@@ -7,7 +7,7 @@
   --color-primary: lightblue;
   --color-secondary: antiquewhite;
   --color-alert: red;
-  --color-selected: orange;
+  --color-selected: lightblue;
   --color-lightgrey: #efefef;
 
   --border-radius: 8px;
@@ -89,7 +89,7 @@ header {
 }
 
 .selected {
-  background-color: var(--color-selected);
+  background-color: var(--color-selected) !important;
 }
 
 .listbox {
@@ -118,4 +118,17 @@ ul {
 
 li {
   margin-bottom: var(--small-gap);
+  gap: var(--small-gap);
+  display: flex;
+  align-items: center;
+}
+
+.add-item {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--border-radius);
+  border: var(--border-controls);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

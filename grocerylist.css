@@ -1,0 +1,17 @@
+.add-item-wrapper {
+  display: flex;
+  gap: var(--small-gap);
+  position: fixed;
+  bottom: 100px;
+  left: 20px;
+  right: 20px;
+}
+
+.add-item-wrapper input {
+  flex: 1;
+  min-height: 30px;
+  padding: 0 var(--small-gap);
+  border-radius: var(--border-radius);
+  border: var(--border-controls);
+  margin: 0;
+}

@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mealplanner</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="grocerylist.css" />
+    <script src="grocerylist.js"></script>
   </head>
 
-  <body>
+  <body onload="init()">
     <div class="wrapper">
       <header>
         <h1>Lists</h1>
@@ -16,23 +18,37 @@
 
       <main>
         <nav>
-          <div class="listbox">
+          <button
+            class="listbox selected"
+            id="shoppinglistbutton"
+            onclick="
+              toggleList(shoppinglist, 'shoppinglistbutton', 'pantrylistbutton')
+            "
+          >
             <span>Shopping</span>
-          </div>
-          <div class="listbox">
+          </button>
+          <button
+            class="listbox"
+            id="pantrylistbutton"
+            onclick="
+              toggleList(pantrylist, 'pantrylistbutton', 'shoppinglistbutton')
+            "
+          >
             <span>Pantry</span>
-          </div>
+          </button>
         </nav>
 
-        <ul>
-          <li><input type="checkbox" name="" id="" /> Rice</li>
-          <li><input type="checkbox" name="" id="" /> Salmon</li>
-          <li><input type="checkbox" name="" id="" /> Chicken</li>
-        </ul>
+        <ul id="list"></ul>
+        <div class="add-item-wrapper">
+          <input type="text" id="newItem" placeholder="Add item to list" />
+          <button class="add-item" onclick="addItem()">
+            <img src="assets/img/icon_add.svg" alt="" />
+          </button>
+        </div>
       </main>
 
       <footer class="navigation">
-        <a class="navigationbox" href="/grocerylist.html">
+        <a class="navigationbox">
           <img src="assets/img/icon_list.svg" alt="" />
         </a>
         <a class="navigationbox" href="/calendar.html">
@@ -44,14 +60,14 @@
         <a class="navigationbox" href="/meals.html">
           <img src="assets/img/icon_burger.svg" alt="" />
         </a>
-        <a class="navigationbox" href="/settings">
+        <a class="navigationbox" href="/settings.html">
           <img src="assets/img/icon_gear.svg" alt="" />
         </a>
       </footer>
     </div>
 
-    <a class="addbox" href="addmeal.html">
+    <!-- <a class="addbox" href="addmeal.html">
       <img src="assets/img/icon_add.svg" alt="" />
-    </a>
+    </a> -->
   </body>
 </html>
