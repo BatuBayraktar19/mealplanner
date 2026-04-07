@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Meal</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="addmeal.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Add a Meal</h1>
+        <img src="assets/img/icon_chef_hat.svg" alt="" />
+      </header>
+
+      <main>
+        <form>
+          <div class="input-wrapper">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter a name"
+            />
+          </div>
+          <div class="input-wrapper">
+            <label for="calories">Calories</label>
+            <input
+              type="number"
+              name="calories"
+              id="calories"
+              placeholder="Enter calories amount"
+            />
+          </div>
+          <div class="input-wrapper">
+            <label for="ingredients">Ingredients</label>
+            <div class="ingredient-wrapper">
+              <input
+                type="text"
+                name="ingredients"
+                id="ingredients"
+                placeholder="Add ingredients"
+              />
+              <button class="add-ingredient">
+                <img src="assets/img/icon_add.svg" alt="" />
+              </button>
+            </div>
+          </div>
+
+          <button class="save-button" type="submit">Save</button>
+        </form>
+      </main>
+
+      <footer class="navigation">
+        <a class="navigationbox" href="/grocerylist.html">
+          <img src="assets/img/icon_list.svg" alt="" />
+        </a>
+        <a class="navigationbox" href="/calendar.html">
+          <img src="assets/img/icon_calendar.svg" alt="" />
+        </a>
+        <a class="navigationbox" href="/addmeal.html">
+          <img src="assets/img/icon_add.svg" alt="" />
+        </a>
+        <a class="navigationbox" href="/meals.html">
+          <img src="assets/img/icon_burger.svg" alt="" />
+        </a>
+        <a class="navigationbox" href="/settings">
+          <img src="assets/img/icon_gear.svg" alt="" />
+        </a>
+      </footer>
+    </div>
+
+    <a class="addbox" href="addmeal.html">
+      <img src="assets/img/icon_add.svg" alt="" />
+    </a>
+  </body>
+</html>

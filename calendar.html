@@ -1,46 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calendar</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="calendar.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="calendar.css" />
+  </head>
 
-<body>
+  <body>
     <div class="wrapper">
-        <Header class="header">
-            <div class="header-button listbox">
-                <p>Day</p>
-            </div>
-            <div class="header-button listbox">
-                <p>Week</p>
-            </div>
-            <div class="header-button listbox">
-                <p>Month</p>
-            </div>
-        </Header>
+      <header>
+        <h1>Calendar</h1>
+        <img src="assets/img/icon_calendar.svg" alt="" />
+      </header>
 
-        <Main>
-            <div class="calendar-wrapper">
-                <input class="listbox" type="date">
-            </div>
-            <div class="addbox">
-                <p>+</p>
-            </div>
-        </Main>
+      <main>
+        <nav>
+          <div class="listbox">
+            <span>Day</span>
+          </div>
+          <div class="listbox">
+            <span>Week</span>
+          </div>
+          <div class="listbox">
+            <span>Month</span>
+          </div>
+        </nav>
+        <div class="calendar-wrapper">
+          <input class="listbox" type="date" />
+        </div>
+        <a class="addbox" href="addmeal.html">
+          <img src="assets/img/icon_add.svg" alt="" />
+        </a>
+      </main>
 
-
-        <Footer class="navigation">
-            <a class="navigationbox" href="/grocerylist.html">Ein</a>
-            <a class="navigationbox selected" href="/calendar.html">Cal</a>
-            <a class="navigationbox" href="/formular.html">For</a>
-            <a class="navigationbox" href="/"></a>
-            <a class="navigationbox" href="/"></a>
-        </Footer>
+      <footer class="navigation">
+        <a class="navigationbox" href="/grocerylist.html">
+          <img src="assets/img/icon_list.svg" alt="" />
+        </a>
+        <a class="navigationbox" href="/calendar.html">
+          <img src="assets/img/icon_calendar.svg" alt="" />
+        </a>
+        <a class="navigationbox" href="/addmeal.html">
+          <img src="assets/img/icon_add.svg" alt="" />
+        </a>
+        <a class="navigationbox" href="/meals.html">
+          <img src="assets/img/icon_burger.svg" alt="" />
+        </a>
+        <a class="navigationbox" href="/settings">
+          <img src="assets/img/icon_gear.svg" alt="" />
+        </a>
+      </footer>
     </div>
-</body>
-
+  </body>
 </html>

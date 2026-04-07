@@ -1,83 +1,121 @@
-.wrapper {
-    height: 100vh;
+:root {
+  /* css variables: use like this: property: var(--var-name); */
+  --small-gap: 10px;
+  --medium-gap: 20px;
+  --big-gap: 30px;
+
+  --color-primary: lightblue;
+  --color-secondary: antiquewhite;
+  --color-alert: red;
+  --color-selected: orange;
+  --color-lightgrey: #efefef;
+
+  --border-radius: 8px;
+
+  --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+  --border-controls: 1px solid grey;
 }
 
-.navigation {
-    position: fixed;
-    bottom: 0px;
-    display: flex;
-    height: 60px;
-    width: 100vw;
-    background-color: gray;
-    align-items: center;
-    justify-content: space-around;
+@font-face {
+  font-family: roboto; /* set name */
+  src: url(assets/fonts/Roboto/Roboto-Medium.ttf); /* url of the font */
 }
 
 body {
-    display: block;
-    margin: 0px;
+  margin: 0;
+  box-sizing: border-box; /* height & width are calculated with padding/margin */
+  background-color: rgb(226, 239, 243);
+  font-family: "roboto"; /* whole project uses same font */
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.navigation {
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+  height: 80px;
+  width: 100vw;
+  background-color: var(--color-primary);
+  align-items: center;
+  justify-content: space-around;
 }
 
 .navigationbox {
-    width: 50px;
-    height: 25px;
-    background-color: black;
-    border-radius: 12px;
-    color: white;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.navigationbox:active {
-    background-color: goldenrod;
+.navigationbox img {
+  height: 34px;
 }
 
-.header {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    left: 20px;
-    display: flex;
-    height: 50px;
-    align-items: center;
-    justify-content: space-around;
-    border-radius: 12px;
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  height: 50px;
+  background-color: var(--color-primary);
+  align-items: center;
+  justify-content: center;
+  gap: var(--small-gap);
 }
 
 .addbox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    right: 10px;
-    bottom: 70px;
-    height: 40px;
-    width: 40px;
-    border-radius: 12px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    transition: all 125ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 20px;
+  bottom: 100px;
+  height: 40px;
+  width: 40px;
+  border-radius: var(--border-radius);
+  background-color: var(--color-lightgrey);
+  box-shadow: var(--box-shadow);
+  border: var(--border-controls);
+  transition: all 125ms;
 }
 
 .addbox:hover {
-    background-color: blanchedalmond;
-
+  background-color: var(--color-secondary);
 }
 
 .selected {
-    background-color: orange;
+  background-color: var(--color-selected);
 }
 
 .listbox {
-    display: flex;
-    width: 50%;
-    justify-content: center;
-    border-radius: 12px;
-    background-color: aqua;
-    background: #ffffff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  border: var(--border-controls);
+  padding: 5px 10px;
+  background-color: var(--color-lightgrey);
+}
+
+main {
+  margin-top: 50px;
+  padding: var(--medium-gap);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: var(--small-gap);
+}
+
+ul {
+  list-style-type: none;
+  margin-top: var(--big-gap);
+}
+
+li {
+  margin-bottom: var(--small-gap);
 }
