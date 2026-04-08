@@ -4,19 +4,17 @@
   justify-content: center;
   border-radius: 12px;
   background-color: aqua;
-  background: #ffffff;
   box-shadow: var(--box-shadow);
   border: var(--border-controls);
 }
 
 .list {
   display: grid;
-  grid-template-areas:
-  "meal meal"
-  "meal meal";
-  grid-template-columns: 2fr 2fr ;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--small-gap);
-  padding:  30px;
+  padding: var(--big-gap);
   top: var(--header-height);
   bottom: var(--footer-height);
 }
@@ -32,15 +30,22 @@
   background: #ffffff;
   box-shadow: var(--box-shadow);
   border: var(--border-controls);
-  width: 300px;
+  width: 100%;
   height: 250px;
 }
+
+@media (width <=600px) {
+  .list .meal {
+    height: 200px;
+  }
+  .list {
+    grid-template-columns: 2fr;
+  }
+}
+
 @media (width >=950px) {
   .list {
-    grid-template-areas:
-  "meal meal meal"
-  "meal meal meal";
-  grid-template-columns: 2fr 2fr 2fr;
+    grid-template-columns: repeat(3,2fr);
   }
 }
 
@@ -66,8 +71,11 @@ h2 {
 
 .displayFlex {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  gap: 4px;
+  padding-top: 8px;
 }
 
 /*@media (width <=900px) {

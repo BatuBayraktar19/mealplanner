@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,15 +7,14 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="meals.css" />
 </head>
-
 <body>
   <div class="wrapper">
-    <div class="list">
-      <header class="header">
-        <h1>Meals</h1>
-        <img src="assets/img/icon_chef_hat.svg">
-      </header>
+    <header>
+      <h1>Meals</h1>
+      <img src="assets/img/icon_chef_hat.svg" alt="" />
+    </header>
 
+    <main>
       <div class="list">
         <div class="meal">
           <h2>Lachsfilet</h2>
@@ -30,37 +28,35 @@
           <span>-Wasser</span>
         </div>
         <div class="meal">
-          <img src="assets/img/meals/Döner.jpg" class="mealboximg">
+          <img src="assets/img/meals/Döner.jpg" class="mealboximg" alt="" />
           <div class="displayFlex">
             <h2>Döner</h2>
             <span>-macht schöner</span>
           </div>
-
         </div>
       </div>
       <a class="addbox" href="addmeal.html">
         <img src="assets/img/icon_add.svg" alt="" />
       </a>
-    </div>
+    </main>
+
+    <footer class="navigation">
+      <a class="navigationbox" href="/grocerylist.html">
+        <img src="assets/img/icon_list.svg" alt="" />
+      </a>
+      <a class="navigationbox" href="/calendar.html">
+        <img src="assets/img/icon_calendar.svg" alt="" />
+      </a>
+      <a class="navigationbox" href="/addmeal.html">
+        <img src="assets/img/icon_add.svg" alt="" />
+      </a>
+      <a class="navigationbox" href="/meals.html">
+        <img src="assets/img/icon_burger_DarkBlue.svg" alt="" />
+      </a>
+      <a class="navigationbox" href="/settings">
+        <img src="assets/img/icon_gear.svg" alt="" />
+      </a>
+    </footer>
   </div>
-
-  <footer class="navigation">
-    <a class="navigationbox" href="grocerylist.html">
-      <img src="assets\img\icon_list.svg">
-    </a>
-    <a class="navigationbox" href="calendar.html">
-      <img src="assets\img\icon_calendar.svg">
-    </a>
-    <a class="navigationbox" href="addmeal.html">
-      <img src="assets\img\icon_add.svg">
-    </a>
-    <a class="navigationbox">
-      <img src="assets\img\icon_burger_DarkBlue.svg">
-    </a>
-    <a class="navigationbox" href="">
-      <img src="assets\img\icon_gear.svg">
-    </a>
-  </footer>
 </body>
-
 </html>
