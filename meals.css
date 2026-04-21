@@ -42,7 +42,7 @@
 
 @media (width >=950px) {
   .list {
-    grid-template-columns: repeat(3,2fr);
+    grid-template-columns: repeat(3, 2fr);
   }
 }
 
@@ -73,6 +73,13 @@ h2 {
   justify-content: space-between;
   gap: 4px;
   padding-top: 8px;
+}
+
+.meal-browser-button {
+  position: absolute;
+  top: 50%;
+  right: 70px;
+  transform: translateY(-50%);
 }
 
 /*@media (width <=900px) {
