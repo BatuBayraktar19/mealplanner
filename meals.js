@@ -15,9 +15,32 @@ let meals = [
     image: "assets/img/meals/Döner.jpg",
   },
 ];
-
-const mealBrowser = ["Lasagne", "Pizza - Quattro Fromaggi", "Reis mit hähnchen", "Nudeln mit Pesto"];
 let recipes = meals;
+
+let mealBrowser = [
+  {
+    title: "Lasagne",
+    ingredients: ["Lasagne"],
+    image: null,
+  },
+  {
+    title: "Pizza - Quattro Fromaggi",
+    ingredients: ["Teig"],
+    image: null,
+  },
+  {
+    title: "Reis mit hähnchen",
+    ingredients: ["Reis", "Hähnchen"],
+    image: "",
+  },
+  {
+    title: "Nudeln mit Pesto",
+    ingredients: ["Nudeln", "Pesto"],
+    image: "",
+  },
+];
+
+let OnlineMeals = mealBrowser;
 
 function init() {
   renderRecipes();
@@ -57,14 +80,33 @@ function renderRecipes() {
 
 function renderMealBrowser() {
   const container = document.getElementById("list");
-  container.innerHTML = "";
+  container.innerHTML = "";  // Container leeren, bevor neue Inhalte hinzugefügt werden
 
-  mealBrowser.forEach((meal) => {
-    container.innerHTML += `
-      <div class="meal">
-        <h2>${meal}</h2>
-      </div>
-    `;
+  OnlineMeals.forEach((meal) => {
+    let ingredientsHTML = "";
+
+    meal.ingredients.forEach((ing) => {
+      ingredientsHTML += `<span>-${ing}</span>`;  // Zutaten hinzufügen
+    });
+
+    if (meal.image) {
+      container.innerHTML += `
+        <div class="meal">
+          <img src="${meal.image}" class="mealboximg" />
+          <div class="displayFlex">
+            <h2>${meal.title}</h2>
+            ${ingredientsHTML}
+          </div>
+        </div>
+      `;
+    } else {
+      container.innerHTML += `
+        <div class="meal">
+          <h2>${meal.title}</h2>
+          ${ingredientsHTML}
+        </div>
+      `;
+    }
   });
 }
 
