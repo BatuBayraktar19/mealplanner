@@ -185,3 +185,20 @@ li {
 .selected svg {
   fill: var(--color-action-button);
 }
+
+.change-home-button {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  background-color: var(--color-primary);
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+.change-workspace-button:hover {
+  background-color: var(--color-hover-primary);
+}
