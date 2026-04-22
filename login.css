@@ -7,22 +7,20 @@
 .action-button {
   text-decoration: none;
   color: inherit;
-  min-height: 30px;
-  width: fit-content;
-  padding: 0 var(--small-gap);
   border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
   border: var(--border-controls);
+  padding: 5px 10px;
+  background-color: var(--color-lightgrey1);
+  width: 60px;
+  display: inline-flex;
 }
+
 form {
   display: flex;
   flex-direction: column;
   gap: var(--medium-gap);
   width: 100%;
-}
-
-form > a {
-  display: inline-block;
-  margin: 5px;
 }
 
 input {
