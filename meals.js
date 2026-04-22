@@ -41,13 +41,13 @@ let mealBrowser = [
 
 function renderList(list) {
   const container = document.getElementById("list");
-  container.innerHTML = "";  // Container leeren, bevor neue Inhalte hinzugefügt werden
+  container.innerHTML = "";
 
   list.forEach((meal) => {
     let ingredientsHTML = "";
 
     meal.ingredients.forEach((ing) => {
-      ingredientsHTML += `<span>-${ing}</span>`;  // Zutaten hinzufügen
+      ingredientsHTML += `<span>-${ing}</span>`;
     });
 
     if (meal.image) {
