@@ -4,19 +4,6 @@
   gap: 5px;
 }
 
-.action-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  color: inherit;
-  min-height: 30px;
-  width: fit-content;
-  padding: 0 var(--small-gap);
-  border-radius: var(--border-radius);
-  border: var(--border-controls);
-}
-
 form {
   display: flex;
   flex-direction: column;

@@ -202,3 +202,14 @@ li {
 .change-workspace-button:hover {
   background-color: var(--color-hover-primary);
 }
+
+.default-button {
+text-decoration: none;
+  color: inherit;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  border: var(--border-controls);
+  padding: 5px 10px;
+  background-color: var(--color-lightgrey1);
+  width: fit-content;
+}
