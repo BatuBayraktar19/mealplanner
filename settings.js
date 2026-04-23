@@ -1,5 +1,11 @@
 const settings = [
   {
+    name: "Change Home",
+    icon: "assets/img/icon_house.svg",
+    link: "/home.html",
+    group: "general",
+  },
+  {
     name: "Profile",
     icon: "assets/img/icon_burger.svg",
     link: "/profile.html",
