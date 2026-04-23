@@ -1,7 +1,13 @@
 .input-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: var(--small-gap);
+}
+
+.login-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: var(--small-gap);
 }
 
 
