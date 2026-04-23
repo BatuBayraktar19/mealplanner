@@ -4,17 +4,6 @@
   gap: 5px;
 }
 
-.action-button {
-  text-decoration: none;
-  color: inherit;
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  border: var(--border-controls);
-  padding: 5px 10px;
-  background-color: var(--color-lightgrey1);
-  width: 60px;
-  display: inline-flex;
-}
 
 form {
   display: flex;

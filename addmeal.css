@@ -31,14 +31,6 @@ form {
   height: 20px;
 }
 
-.save-button {
-  min-height: 30px;
-  width: fit-content;
-  padding: 0 var(--small-gap);
-  border-radius: var(--border-radius);
-  border: var(--border-controls);
-}
-
 input {
   flex: 1;
   min-height: 30px;
