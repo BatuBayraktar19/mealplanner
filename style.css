@@ -162,6 +162,13 @@ li {
   transform: translateY(-50%);
 }
 
+.back-button {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+
 .icon-button {
   display: flex;
   align-items: center;
@@ -204,7 +211,7 @@ li {
 }
 
 .default-button {
-text-decoration: none;
+  text-decoration: none;
   color: inherit;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
