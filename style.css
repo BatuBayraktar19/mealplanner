@@ -1,79 +1,222 @@
-.navigation {
-    position: fixed;
-    bottom: 0px;
-    display: flex;
-    height: 60px;
-    width: 100vw;
-    background-color: gray;
-    align-items: center;
-    justify-content: space-around;
+:root {
+  /* css variables: use like this: property: var(--var-name); */
+  --small-gap: 10px;
+  --medium-gap: 20px;
+  --big-gap: 30px;
+
+  --color-primary: lightblue;
+  --color-secondary: antiquewhite;
+  --color-action-button: #21a1ee;
+  --color-alert: red;
+  --color-success: limegreen;
+  --color-selected: lightblue;
+  --color-lightgrey1: #efefef;
+  --color-lightgrey2: #bfbfbf;
+
+  --color-hover-primary: rgba(226, 239, 243, 1);
+  /* --color-hover-primary: rgba(173, 216, 230, 6); */
+  /* --color-text: #5f6368; */
+  --color-text: #45484b;
+
+  --border-radius: 8px;
+
+  --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+  --border-controls: 1px solid grey;
+
+  --header-height: 80px;
+  --footer-height: 80px;
+}
+
+@font-face {
+  font-family: roboto; /* set name */
+  src: url(assets/fonts/Roboto/Roboto-Medium.ttf); /* url of the font */
 }
 
 body {
-    display: block;
-    margin: 0px;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: rgb(226, 239, 243);
+  font-family: "roboto";
+  color: var(--color-text);
 }
 
-.navigationbox {
-    width: 50px;
-    height: 25px;
-    background-color: black;
-    border-radius: 12px;
-    color: white;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+svg {
+  fill: var(--color-text);
+
+  height: 30px;
+  width: 30px;
 }
 
-.navigationbox:active {
-background-color: goldenrod;
+.svg-red {
+  fill: #ff0000;
 }
 
-.header {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    left: 20px;
-    display: flex;
-    height: 50px;
-    align-items: center;
-    justify-content: space-around;  
-    border-radius: 12px;
+.svg-green {
+  fill: #00c500;
 }
 
-.listbox {
-    display: flex;
-    width: 50%;
-    justify-content: center;
-    border-radius: 12px;
-    background-color: aqua;
-    background: #ffffff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); 
-    border: 1px solid rgba(0, 0, 0, 0.08);
+h1 {
+  font-size: 30px;
+  font-weight: normal;
+}
+
+.navigation {
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+  height: var(--footer-height);
+  width: 100vw;
+  background-color: var(--color-primary);
+  align-items: center;
+  justify-content: space-around;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  height: var(--header-height);
+  background-color: var(--color-primary);
+  align-items: center;
+  justify-content: center;
+  gap: var(--small-gap);
+}
+
+header svg {
+  height: 30px;
+  width: 30px;
 }
 
 .addbox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    right: 10px;
-    bottom: 70px;
-    height: 40px;
-    width: 40px;
-    border-radius: 12px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); 
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    transition: all 125ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 20px;
+  bottom: 100px;
+  height: 40px;
+  width: 40px;
+  border-radius: var(--border-radius);
+  background-color: var(--color-lightgrey1);
+  box-shadow: var(--box-shadow);
+  border: var(--border-controls);
+  transition: all 125ms;
 }
 
 .addbox:hover {
-    background-color: blanchedalmond;
-
+  background-color: var(--color-secondary);
 }
 
 .selected {
-    background-color: orange;
+  background-color: var(--color-selected) !important;
+}
+
+.listbox {
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  border: var(--border-controls);
+  padding: 5px 10px;
+  background-color: var(--color-lightgrey1);
+}
+
+main {
+  margin-top: var(--header-height);
+  padding: var(--medium-gap);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: var(--small-gap);
+}
+
+ul {
+  list-style-type: none;
+  margin-top: var(--big-gap);
+}
+
+li {
+  margin-bottom: var(--small-gap);
+  gap: var(--small-gap);
+  display: flex;
+  align-items: center;
+}
+
+.add-item {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--border-radius);
+  border: var(--border-controls);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.back-button {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  padding: 10px;
+  border-radius: var(--border-radius);
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.icon-button img {
+  height: 30px;
+  width: 30px;
+}
+
+.icon-button:hover {
+  filter: brightness(0.95);
+}
+
+.selected svg {
+  fill: var(--color-action-button);
+}
+
+.change-home-button {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  background-color: var(--color-primary);
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+.change-workspace-button:hover {
+  background-color: var(--color-hover-primary);
+}
+
+.default-button {
+  text-decoration: none;
+  color: inherit;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  border: var(--border-controls);
+  padding: 5px 10px;
+  background-color: var(--color-lightgrey1);
+  width: fit-content;
 }
