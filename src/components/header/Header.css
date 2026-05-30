@@ -1,0 +1,28 @@
+header {
+  /* position: fixed;
+  top: 0;
+  right: 0;
+  left: 0; */
+  position: relative;
+  display: flex;
+  height: var(--header-height);
+  background-color: var(--color-primary);
+  align-items: center;
+  justify-content: center;
+  gap: var(--small-gap);
+}
+
+header svg {
+  height: 30px;
+  width: 30px;
+}
+
+.login-button {
+  position: absolute;
+  top: 50%;
+  right: var(--medium-gap);
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

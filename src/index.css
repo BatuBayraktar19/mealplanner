@@ -1,0 +1,47 @@
+:root {
+  /* css variables: use like this: property: var(--var-name); */
+  --small-gap: 10px;
+  --medium-gap: 20px;
+  --big-gap: 30px;
+
+  --color-primary: lightblue;
+  --color-secondary: antiquewhite;
+  --color-background: #e2eef4;
+  --color-action-button: #21a1ee;
+  --color-alert: red;
+  --color-success: limegreen;
+  --color-selected: lightblue;
+  --color-lightgrey1: #efefef;
+  --color-lightgrey2: #bfbfbf;
+
+  --color-hover-primary: rgba(226, 239, 243, 1);
+  /* --color-hover-primary: rgba(173, 216, 230, 6); */
+  /* --color-text: #5f6368; */
+  --color-text: #45484b;
+
+  --border-radius: 8px;
+
+  --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+  --border-controls: 1px solid grey;
+
+  --header-height: 80px;
+  --footer-height: 80px;
+  --form-control-height: 44px;
+}
+
+* {
+  font-family: "roboto";
+  color: var(--color-text);
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: roboto; /* set name */
+  src: url(/src/assets/fonts/Roboto/Roboto-Medium.ttf); /* url of the font */
+}
+
+body {
+  background-color: var(--color-background);
+}

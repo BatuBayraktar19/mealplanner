@@ -1,0 +1,15 @@
+.add-item-wrapper {
+  display: grid;
+  grid-template-columns: 3fr 2fr 1fr;
+  height: fit-content;
+  gap: var(--small-gap);
+
+  input {
+    height: var(--form-control-height);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-text);
+    outline: none;
+    padding: 4px 6px;
+    width: 100%;
+  }
+}

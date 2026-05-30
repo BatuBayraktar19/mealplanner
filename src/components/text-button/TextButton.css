@@ -1,0 +1,13 @@
+.t-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 6px;
+  border: 1px solid var(--color-text);
+  background-color: var(--color-lightgrey1);
+  border-radius: var(--border-radius);
+
+  &:hover {
+    filter: brightness(0.8);
+  }
+}
