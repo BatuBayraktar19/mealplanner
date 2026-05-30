@@ -1,14 +1,12 @@
 import type { IListItem } from "../../types/ListTypes";
+import ListItem from "../list-item/ListItem";
 import "./List.css";
 
 function List({ li }: { li: IListItem[] }) {
   return (
     <ul>
       {li.map((item) => (
-        <li key={item.name + item.id}>
-          <input type="checkbox" name={item.name} id={item.name + item.id} />
-          {item.name} {item.amount}
-        </li>
+        <ListItem key={item.id} item={item}></ListItem>
       ))}
     </ul>
   );

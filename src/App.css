@@ -2,7 +2,7 @@ main {
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: var(--medium-gap);
+  padding: var(--small-gap);
   height: 100%;
 }
 
