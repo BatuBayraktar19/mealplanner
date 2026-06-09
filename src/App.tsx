@@ -7,6 +7,7 @@ import AddMeal from "./pages/add-meal/AddMeal";
 import Lists from "./pages/lists/Lists";
 import Calendar from "./pages/calendar/Calendar";
 import Settings from "./pages/settings/Settings";
+import Login from "./pages/login/Login";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/lists" element={<Lists />} />
             <Route path="/calendar" element={<Calendar />} />
             <Route path="/settings" element={<Settings />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
         </main>
         <Footer />

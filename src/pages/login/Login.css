@@ -1,0 +1,29 @@
+.login-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--big-gap);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--medium-gap);
+  width: 280px;
+
+  input {
+    height: var(--form-control-height);
+    border-radius: var(--border-radius);
+    border: var(--border-controls);
+    outline: none;
+    padding: 8px 12px;
+    width: 100%;
+  }
+}
+
+.login-buttons {
+  display: flex;
+  gap: var(--small-gap);
+}
