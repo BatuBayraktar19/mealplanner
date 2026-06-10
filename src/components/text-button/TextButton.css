@@ -2,17 +2,36 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4px 6px;
-  border: 1px solid var(--color-text);
-  background-color: var(--color-lightgrey1);
-  border-radius: var(--border-radius);
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--color-action-button);
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: all 200ms;
+
+  p {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+  }
 
   &:hover {
-    filter: brightness(0.8);
+    filter: brightness(1.1);
+    box-shadow: var(--box-shadow-hover);
+  }
+
+  &:disabled {
+    background-color: var(--color-lightgrey2);
+    cursor: not-allowed;
+    box-shadow: none;
+
+    p {
+      color: var(--color-text-light);
+    }
   }
 
   &.selected {
-    background-color: var(--color-selected);
-    border-color: var(--color-action-button);
+    background-color: var(--color-text);
+    border: none;
   }
 }

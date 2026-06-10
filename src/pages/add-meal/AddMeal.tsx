@@ -3,7 +3,7 @@ import IconAdd from "../../assets/img/icon_add.svg?react";
 import "./AddMeal.css";
 
 function AddMeal() {
-  const [name, setName] = useState<string>("");
+  const [meal, setMeal] = useState<string>("");
   const [calories, setCalories] = useState<string>("");
   const [currentIngredient, setCurrentIngredient] = useState<string>("");
   const [ingredients, setIngredients] = useState<string[]>([]);
@@ -15,8 +15,7 @@ function AddMeal() {
   }
 
   function handleSave() {
-    console.log({ name, calories, ingredients });
-    setName("");
+    setMeal("");
     setCalories("");
     setIngredients([]);
   }
@@ -25,13 +24,13 @@ function AddMeal() {
     <div className="add-meal-page">
       <form onSubmit={(e) => e.preventDefault()}>
         <div className="input-wrapper">
-          <label htmlFor="name">Name</label>
+          <label htmlFor="Meal">Meal</label>
           <input
-            id="name"
+            id="meal"
             type="text"
-            placeholder="Enter a name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            placeholder="Enter a meal"
+            value={meal}
+            onChange={(e) => setMeal(e.target.value)}
           />
         </div>
         <div className="input-wrapper">
