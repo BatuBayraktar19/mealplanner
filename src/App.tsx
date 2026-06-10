@@ -19,7 +19,7 @@ function App() {
         <Header title="Header" />
         <main>
           <Routes>
-            <Route path="/" element={<AddMeal />} />
+            <Route path="/add-meal" element={<AddMeal />} />
             <Route path="/lists" element={<Lists />} />
             <Route path="/calendar" element={<Calendar />} />
             <Route path="/settings" element={<Settings />} />

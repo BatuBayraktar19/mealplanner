@@ -1,6 +1,5 @@
 import { useState } from "react";
 import type { IMeal } from "../../types/ListTypes";
-import doener from "../../assets/img/meals/Döner.jpg";
 import "./Meals.css";
 
 type Tab = "Recipes" | "MealBrowser";

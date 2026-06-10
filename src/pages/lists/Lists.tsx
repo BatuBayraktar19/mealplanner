@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ListSwitcher from "../../components/list-switcher/ListSwitcher";
 import List from "../../components/list/List";
 import type { IListItem } from "../../types/ListTypes";
@@ -22,15 +22,23 @@ const DUMMY_PANTRY: IListItem[] = [
 ];
 
 function Lists() {
-  const [shoppingList, setShoppingList] = useState<IListItem[]>(DUMMY_SHOPPING);
-  const [pantryList, setPantryList] = useState<IListItem[]>(DUMMY_PANTRY);
+  const [shoppingList, setShoppingList] = useState<IListItem[]>(() => {
+    const saved = localStorage.getItem("shoppingList");
+    return saved ? JSON.parse(saved) : DUMMY_SHOPPING;
+  });
+  const [pantryList, setPantryList] = useState<IListItem[]>(() => {
+    const saved = localStorage.getItem("pantryList");
+    return saved ? JSON.parse(saved) : DUMMY_PANTRY;
+  });
   const [activeList, setActiveList] = useState<"shopping" | "pantry">("shopping");
 
-  // TODO: replace with API call
-  // useEffect(() => {
-  //   fetchShoppingList().then(setShoppingList);
-  //   fetchPantryList().then(setPantryList);
-  // }, []);
+  useEffect(() => {
+    localStorage.setItem("shoppingList", JSON.stringify(shoppingList));
+  }, [shoppingList]);
+
+  useEffect(() => {
+    localStorage.setItem("pantryList", JSON.stringify(pantryList));
+  }, [pantryList]);
 
   const list = activeList === "shopping" ? shoppingList : pantryList;
   const setList = activeList === "shopping" ? setShoppingList : setPantryList;
@@ -45,7 +53,7 @@ function Lists() {
 
   return (
     <div className="lists-wrapper">
-      <ListSwitcher onSwitch={handleSwitch}></ListSwitcher>
+      <ListSwitcher activeList={activeList} onSwitch={handleSwitch}></ListSwitcher>
       <List li={list}></List>
       <AddToList addFunction={addToList}></AddToList>
     </div>

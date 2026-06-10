@@ -9,7 +9,7 @@ function Login() {
   const navigate = useNavigate();
 
   function handleLogin() {
-    navigate("/");
+    navigate("/add-meal");
   }
 
   function handleRegister() {

@@ -21,10 +21,10 @@ form {
 .ingredient-wrapper {
   display: flex;
   gap: var(--small-gap);
+}
 
-  input {
-    flex: 1;
-  }
+.ingredient-wrapper input {
+  flex: 1;
 }
 
 form input {
@@ -33,6 +33,18 @@ form input {
   border-radius: var(--border-radius);
   border: var(--border-controls);
   outline: none;
+}
+
+.add-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--border-radius);
+  border: var(--border-controls);
+  background-color: var(--color-lightgrey1);
+  cursor: pointer;
 }
 
 .ingredients-list {

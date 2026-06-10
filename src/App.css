@@ -2,8 +2,8 @@ main {
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: var(--small-gap);
   height: 100%;
+  padding: var(--header-height) var(--small-gap) var(--footer-height);
 }
 
 .wrapper {
