@@ -3,9 +3,10 @@ header {
   top: 0;
   right: 0;
   left: 0; */
-  position: relative;
+  position: fixed;
   display: flex;
   height: var(--header-height);
+  width: 100%;
   background-color: var(--color-primary);
   align-items: center;
   justify-content: center;

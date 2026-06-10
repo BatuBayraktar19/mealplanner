@@ -13,15 +13,14 @@ export interface SettingsItem {
 }
 
 export interface IMeal {
-  id: string;
-  name: string;
-  calories: number;
+  title: string;
   ingredients: string[];
+  image?: string;
 }
 
 export interface IUser {
   id: string;
   name: string;
   rights: "Admin" | "User";
-  img: string;
+  img?: string;
 }

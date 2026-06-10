@@ -10,6 +10,7 @@ import Settings from "./pages/settings/Settings";
 import Login from "./pages/login/Login";
 import Users from "./pages/users/Users";
 import Home from "./pages/home/Home";
+import Meals from "./pages/meals/Meals";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/users" element={<Users />} />
             <Route path="/home" element={<Home />} />
+            <Route path="/meals" element={<Meals />} />
           </Routes>
         </main>
         <Footer />
