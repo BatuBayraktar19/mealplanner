@@ -4,3 +4,24 @@ export interface IListItem {
   amount?: string;
   checked: boolean;
 }
+
+export interface SettingsItem {
+  id: string;
+  icon?: React.FC;
+  name: string;
+  link: string;
+}
+
+export interface IMeal {
+  id: string;
+  name: string;
+  calories: number;
+  ingredients: string[];
+}
+
+export interface IUser {
+  id: string;
+  name: string;
+  rights: "Admin" | "User";
+  img: string;
+}

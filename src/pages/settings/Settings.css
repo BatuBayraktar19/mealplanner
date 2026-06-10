@@ -1,0 +1,30 @@
+.settings-selection {
+  display: flex;
+  flex-direction: column;
+}
+
+.setting-link {
+  padding: var(--medium-gap);
+  border-bottom: 1px solid var(--color-lightgrey2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+.setting-link:hover {
+  background-color: var(--color-hover-primary);
+  filter: brightness(0.95);
+}
+
+.setting-icon {
+  height: 30px;
+  width: 30px;
+}
+
+.setting-name {
+  flex: 1;
+  margin-left: var(--medium-gap);
+  font-size: 16px;
+  font-weight: normal;
+}

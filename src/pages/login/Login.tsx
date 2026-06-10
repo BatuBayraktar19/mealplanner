@@ -18,6 +18,7 @@ function Login() {
 
   return (
     <div className="login-wrapper">
+      <h1>Login</h1>
       <div className="login-form">
         <input
           type="text"

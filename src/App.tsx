@@ -8,6 +8,8 @@ import Lists from "./pages/lists/Lists";
 import Calendar from "./pages/calendar/Calendar";
 import Settings from "./pages/settings/Settings";
 import Login from "./pages/login/Login";
+import Users from "./pages/users/Users";
+import Home from "./pages/home/Home";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
             <Route path="/calendar" element={<Calendar />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/users" element={<Users />} />
+            <Route path="/home" element={<Home />} />
           </Routes>
         </main>
         <Footer />
