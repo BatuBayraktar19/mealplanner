@@ -24,7 +24,9 @@ const DUMMY_PANTRY: IListItem[] = [
 function Lists() {
   const [shoppingList, setShoppingList] = useState<IListItem[]>(DUMMY_SHOPPING);
   const [pantryList, setPantryList] = useState<IListItem[]>(DUMMY_PANTRY);
-  const [activeList, setActiveList] = useState<"shopping" | "pantry">("shopping");
+  const [activeList, setActiveList] = useState<"shopping" | "pantry">(
+    "shopping",
+  );
 
   // TODO: replace with API call
   // useEffect(() => {
@@ -43,10 +45,14 @@ function Lists() {
     setList((prev) => [...prev, item]);
   }
 
+  function updateList(item: IListItem) {
+    setList((prev) => prev.map((el) => (el.id === item.id ? item : el)));
+  }
+
   return (
     <div className="lists-wrapper">
       <ListSwitcher onSwitch={handleSwitch}></ListSwitcher>
-      <List li={list}></List>
+      <List li={list} updateList={updateList}></List>
       <AddToList addFunction={addToList}></AddToList>
     </div>
   );

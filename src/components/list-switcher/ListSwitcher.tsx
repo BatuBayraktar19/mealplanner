@@ -10,9 +10,12 @@ function ListSwitcher({ onSwitch }: Props) {
     <div className="list-switcher-wrapper">
       <TextButton
         text="Shopping"
-        onClick={() => onSwitch("shopping")}
+        onClicked={() => onSwitch("shopping")}
       ></TextButton>
-      <TextButton text="Pantry" onClick={() => onSwitch("pantry")}></TextButton>
+      <TextButton
+        text="Pantry"
+        onClicked={() => onSwitch("pantry")}
+      ></TextButton>
     </div>
   );
 }
