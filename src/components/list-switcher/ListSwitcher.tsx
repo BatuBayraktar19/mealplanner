@@ -2,10 +2,11 @@ import TextButton from "../text-button/TextButton";
 import "./ListSwitcher.css";
 
 type Props = {
+  activeList: "shopping" | "pantry";
   onSwitch: (list: "shopping" | "pantry") => void;
 };
 
-function ListSwitcher({ onSwitch }: Props) {
+function ListSwitcher({ activeList, onSwitch }: Props) {
   return (
     <div className="list-switcher-wrapper">
       <TextButton

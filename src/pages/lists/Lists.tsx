@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ListSwitcher from "../../components/list-switcher/ListSwitcher";
 import List from "../../components/list/List";
 import type { IListItem } from "../../types/ListTypes";
@@ -28,11 +28,13 @@ function Lists() {
     "shopping",
   );
 
-  // TODO: replace with API call
-  // useEffect(() => {
-  //   fetchShoppingList().then(setShoppingList);
-  //   fetchPantryList().then(setPantryList);
-  // }, []);
+  useEffect(() => {
+    localStorage.setItem("shoppingList", JSON.stringify(shoppingList));
+  }, [shoppingList]);
+
+  useEffect(() => {
+    localStorage.setItem("pantryList", JSON.stringify(pantryList));
+  }, [pantryList]);
 
   const list = activeList === "shopping" ? shoppingList : pantryList;
   const setList = activeList === "shopping" ? setShoppingList : setPantryList;

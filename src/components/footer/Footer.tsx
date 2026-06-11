@@ -4,9 +4,15 @@ import IconCalendar from "../../assets/img/icon_calendar.svg?react";
 import IconAdd from "../../assets/img/icon_add.svg?react";
 import IconBurger from "../../assets/img/icon_burger.svg?react";
 import IconGear from "../../assets/img/icon_gear.svg?react";
-import { Link } from "react-router-dom";
+import { Link, useLocation} from "react-router-dom";
 
 function Footer() {
+  const location = useLocation();
+
+  if (location.pathname === "/login") {
+    return null;
+  }
+
   return (
     <footer className="navigation">
       <Link className="icon-button" to="/lists">

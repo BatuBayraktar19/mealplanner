@@ -7,9 +7,23 @@ function Header({ title }: { title?: string }) {
   const location = useLocation();
   console.log("loc", location.pathname);
 
+  if (location.pathname === "/login") {
+    return null;
+  }
+
+  const titles: Record<string, string> = {
+    "/add-meal": "Add Meal",
+    "/lists": "Lists",
+    "/settings": "Settings",
+    "/calendar": "Calendar",
+    "/home": "Home",
+    "/meals": "Meals",
+    "/users": "Users"
+  };
+
   return (
     <header>
-      <h1>{title}</h1>
+      <h1>{titles[location.pathname]}</h1>
       <IconChefHat></IconChefHat>
 
       <Link className="login-button icon-button" to="/login">
