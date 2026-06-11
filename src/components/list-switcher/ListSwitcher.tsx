@@ -12,13 +12,11 @@ function ListSwitcher({ activeList, onSwitch }: Props) {
       <TextButton
         text="Shopping"
         onClicked={() => onSwitch("shopping")}
-        selected={activeList === "shopping"}
-      />
+      ></TextButton>
       <TextButton
         text="Pantry"
         onClicked={() => onSwitch("pantry")}
-        selected={activeList === "pantry"}
-      />
+      ></TextButton>
     </div>
   );
 }

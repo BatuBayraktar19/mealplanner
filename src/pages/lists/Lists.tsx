@@ -22,15 +22,11 @@ const DUMMY_PANTRY: IListItem[] = [
 ];
 
 function Lists() {
-  const [shoppingList, setShoppingList] = useState<IListItem[]>(() => {
-    const saved = localStorage.getItem("shoppingList");
-    return saved ? JSON.parse(saved) : DUMMY_SHOPPING;
-  });
-  const [pantryList, setPantryList] = useState<IListItem[]>(() => {
-    const saved = localStorage.getItem("pantryList");
-    return saved ? JSON.parse(saved) : DUMMY_PANTRY;
-  });
-  const [activeList, setActiveList] = useState<"shopping" | "pantry">("shopping");
+  const [shoppingList, setShoppingList] = useState<IListItem[]>(DUMMY_SHOPPING);
+  const [pantryList, setPantryList] = useState<IListItem[]>(DUMMY_PANTRY);
+  const [activeList, setActiveList] = useState<"shopping" | "pantry">(
+    "shopping",
+  );
 
   useEffect(() => {
     localStorage.setItem("shoppingList", JSON.stringify(shoppingList));
@@ -51,10 +47,14 @@ function Lists() {
     setList((prev) => [...prev, item]);
   }
 
+  function updateList(item: IListItem) {
+    setList((prev) => prev.map((el) => (el.id === item.id ? item : el)));
+  }
+
   return (
     <div className="lists-wrapper">
-      <ListSwitcher activeList={activeList} onSwitch={handleSwitch}></ListSwitcher>
-      <List li={list}></List>
+      <ListSwitcher onSwitch={handleSwitch}></ListSwitcher>
+      <List li={list} updateList={updateList}></List>
       <AddToList addFunction={addToList}></AddToList>
     </div>
   );
